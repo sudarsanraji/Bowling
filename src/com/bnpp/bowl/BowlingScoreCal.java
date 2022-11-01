@@ -9,7 +9,6 @@ package com.bnpp.bowl;
 import java.util.List;
 
 
-
 public class BowlingScoreCal {
 	
 	int calculate(List<FrameDojo> frames) {
@@ -20,5 +19,18 @@ public class BowlingScoreCal {
 	    return totalScore;
 	  }
 
+	  private int calculateEachFrame(List<FrameDojo> frames, int index) {
+		  FrameDojo frame = frames.get(index);
+	    if (frame.isBonus()) {
+	      return 0;
+	    }
+	    if (frame.isSpare()) {
+	      return frame.calculateScore() + frame.getBonus();
+	    }
+	    if (frame.isStrike()) {
+	      return frame.calculateScore() + frame.getBonus();
+	    }
+	    return frame.calculateScore();
+	  }
 
 }
