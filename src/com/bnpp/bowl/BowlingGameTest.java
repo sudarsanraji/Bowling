@@ -75,7 +75,7 @@ public class BowlingGameTest {
 
 	  @Test
 	  public void ninePinsDownEachRound() throws Exception {
-	    int score = bowlingGame.getScore("9-9-9-9-9-9-9-9-9-9-");
+	    int score = bowlingGame.getScore("9-9-9-9-9-9-9-9-9-9-9");
 
 	    assertThat(score, is(90));
 	  }
