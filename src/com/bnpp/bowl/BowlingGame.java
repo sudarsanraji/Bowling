@@ -5,6 +5,12 @@
  */
 package com.bnpp.bowl;
 
+
+/**
+ * This class is service class.
+ *
+ */
+
 public class BowlingGame {
 	
 	  int getScore(String input) {
