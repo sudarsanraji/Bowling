@@ -5,6 +5,12 @@ import java.util.List;
 
 import static com.bnpp.bowl.BowlingConstantCls.STRIKE_SIGNAL;
 
+/**
+ * This class is for build the frame of bowling.
+ *
+ */
+
+
 class FramesBuilder {
 
   private static final String EMPTY = "";

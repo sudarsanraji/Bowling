@@ -8,6 +8,11 @@
 
 package com.bnpp.bowl;
 
+/**
+ * This class is POJO class which is having setter and getter classes
+ *
+ */
+
 
 import static java.lang.Integer.parseInt;
 import static com.bnpp.bowl.BowlingConstantCls.EMPTY;

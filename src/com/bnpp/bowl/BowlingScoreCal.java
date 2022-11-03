@@ -9,6 +9,12 @@ package com.bnpp.bowl;
 import java.util.List;
 
 
+/**
+ * This class is created to calculate the score of bowling.
+ *
+ */
+
+
 public class BowlingScoreCal {
 	
 	int calculate(List<FrameDojo> frames) {
