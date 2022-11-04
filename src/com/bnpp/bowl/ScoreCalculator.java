@@ -1,23 +1,10 @@
-
-/**
- * @author Venkat Raji
- *
- */
-
 package com.bnpp.bowl;
 
 import java.util.List;
 
-
-/**
- * This class is created to calculate the score of bowling.
- *
- */
-
-
-public class BowlingScoreCal {
+public class ScoreCalculator {
 	
-	int calculate(List<FrameDojo> frames) {
+	int calculate(List<FrameDTO> frames) {
 	    int totalScore = 0;
 	    for (int index = 0; index < frames.size(); index++) {
 	      totalScore += calculateEachFrame(frames, index);
@@ -25,8 +12,8 @@ public class BowlingScoreCal {
 	    return totalScore;
 	  }
 
-	  private int calculateEachFrame(List<FrameDojo> frames, int index) {
-		  FrameDojo frame = frames.get(index);
+	  private int calculateEachFrame(List<FrameDTO> frames, int index) {
+		  FrameDTO frame = frames.get(index);
 	    if (frame.isBonus()) {
 	      return 0;
 	    }

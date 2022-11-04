@@ -1,21 +1,10 @@
-
-/**
- * @author Venkat Raji
- *
- */
 package com.bnpp.bowl;
 
-
-/**
- * This class is service class.
- *
- */
-
-public class BowlingGame {
+public class Game {
 	
 	  int getScore(String input) {
 		    FramesBuilder framesBuilder = new FramesBuilder();
-		    BowlingScoreCal bowlingCalculator = new BowlingScoreCal();
+		    ScoreCalculator bowlingCalculator = new ScoreCalculator();
 		    return bowlingCalculator.calculate(framesBuilder.build(input));
 		  }
 

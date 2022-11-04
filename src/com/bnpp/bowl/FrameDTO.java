@@ -1,39 +1,25 @@
-
-
-/**
- * @author Venkat Raji
- *
- */
-
-
 package com.bnpp.bowl;
 
-/**
- * This class is POJO class which is having setter and getter classes
- *
- */
-
-
 import static java.lang.Integer.parseInt;
-import static com.bnpp.bowl.BowlingConstantCls.EMPTY;
-import static com.bnpp.bowl.BowlingConstantCls.LINE;
-import static com.bnpp.bowl.BowlingConstantCls.SPARE_SIGNAL;
-import static com.bnpp.bowl.BowlingConstantCls.STRIKE_SIGNAL;
+import static com.bnpp.bowl.ConstantCls.EMPTY;
+import static com.bnpp.bowl.ConstantCls.LINE;
+import static com.bnpp.bowl.ConstantCls.SPARE_SIGNAL;
+import static com.bnpp.bowl.ConstantCls.STRIKE_SIGNAL;
 
 
-public class FrameDojo {
+public class FrameDTO {
 	
 	private String first;
 	  private String second;
 	  private boolean bonus;
 	  private String upComingRecords;
 
-	  FrameDojo(String first, String second) {
+	  FrameDTO(String first, String second) {
 	    this.first = first;
 	    this.second = second;
 	  }
 
-	  FrameDojo() {
+	  FrameDTO() {
 
 	  }
 

@@ -1,10 +1,4 @@
 
-/**
- * @author Venkat Raji
- *
- */
-
-
 package com.bnpp.bowl;
 
 import org.junit.Before;
@@ -15,20 +9,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 
-/**
- * This test class is created to define a test cases using junit framework.
- * we cover the all required cases
- *
- */
+public class GameTest {
 
-
-public class BowlingGameTest {
-
-	private BowlingGame bowlingGame;
+	private Game bowlingGame;
 
 	  @Before
 	  public void setUp() throws Exception {
-	    bowlingGame = new BowlingGame();
+	    bowlingGame = new Game();
 	  }
 
 	  @Test

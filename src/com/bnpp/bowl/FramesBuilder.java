@@ -3,21 +3,16 @@ package com.bnpp.bowl;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.bnpp.bowl.BowlingConstantCls.STRIKE_SIGNAL;
-
-/**
- * This class is for build the frame of bowling.
- *
- */
+import static com.bnpp.bowl.ConstantCls.STRIKE_SIGNAL;
 
 
 class FramesBuilder {
 
   private static final String EMPTY = "";
 
-  List<FrameDojo> build(String input) {
-    String[] records = input.split(EMPTY);
-    List<FrameDojo> frames = new ArrayList<>();
+  List<FrameDTO> build(String framesdata) {
+    String[] records = framesdata.split(EMPTY);
+    List<FrameDTO> frames = new ArrayList<>();
     int index = 0;
     for (; index < records.length - 1; index++) {
       if (frames.size() == 10) {
@@ -34,19 +29,19 @@ class FramesBuilder {
     return frames;
   }
 
-  private FrameDojo createBonusFrame(String[] records, int index) {
+  private FrameDTO createBonusFrame(String[] records, int index) {
     String firstRecord = records[index++];
     String secondRecord = EMPTY;
     if (records.length > index) {
       secondRecord = records[index];
     }
-    FrameDojo frame = new FrameDojo(firstRecord, secondRecord);
+    FrameDTO frame = new FrameDTO(firstRecord, secondRecord);
     frame.setBonus(true);
     return frame;
   }
 
-  private FrameDojo buildFrame(String[] records, int index) {
-	  FrameDojo frame = new FrameDojo();
+  private FrameDTO buildFrame(String[] records, int index) {
+	  FrameDTO frame = new FrameDTO();
     frame.setFirst(records[index]);
     frame.setBonus(false);
     if (!isStrike(records[index])) {
